@@ -1,35 +1,32 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-
-
-
 #large-header {
   padding-top: 30vh;
-  background-image: url("/images/Rooftops.jpg") !important;
+  background-image: url("/images/Rooftops-scaled.jpg") !important;
   background-size: cover;
   padding-bottom: 30vh;
 }
 
-header h1, header h2{
+header h1, header h2 {
   text-align: center;
   color: $my-blue;
 }
 
-footer{
+footer {
   background: $my-beige;
 }
 
-footer p{
+footer p {
   margin-top: 20px;
   text-align: center;
 }
 
-#main-header{
+#main-header {
   font-size: 6vw;
 }
 
-#header-title{
+#header-title {
   font-size: 5vw;
 }
 
@@ -37,44 +34,70 @@ footer p{
   background: $my-brown;
 }
 
+.banner-background h2{
+  text-align: center;
+  color: $my-blue;
+  margin-top: 50px;
+}
+
+.banner-background p{
+  text-align: center;
+  color: $my-green;
+}
+
+.banner-background{
+  background-image: url("/images/banner-background.png") !important;
+  background-size: cover;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.banner-background img{
+  display: block !important;
+  margin: 0 auto;
+  max-height: 300px;
+  max-width: 300px;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
 .background-blue {
   background: $my-blue;
 }
 
-.v-center-wrapper{
+.v-center-wrapper {
   height: 100%;
 }
 
-#plus-button{
+#plus-button {
   position: absolute;
   @include center-absolute;
   z-index: 10;
 }
 
-.horizontal-align{
+.horizontal-align {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-
-#game-info{
+#game-info {
   background: $my-blue;
 }
 
-.margin-top-small{
+.margin-top-small {
   margin-top: 20% !important;
 }
 
-#game-info h1, #game-info h4{
+#game-info h1, #game-info h4 {
   color: $my-brown;
 }
 
-#game-info p{
+#game-info p {
   color: $my-beige;
 }
 
-#team-info{
+#team-info {
   background: $my-brown;
 }
 
@@ -83,7 +106,7 @@ footer p{
   width: 100%;
 }
 
-.team-icon{
+.team-icon {
   padding-top: 20px;
   text-align: center;
   color: $my-orange;
@@ -101,25 +124,25 @@ footer p{
   color: $my-green;
 }
 
-#contact{
+#contact {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-#contact h1, #contact i{
+#contact h1, #contact i {
   color: $my-blue;
 }
 
-#contact h1{
+#contact h1 {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.contact-icon-right{
+.contact-icon-right {
   text-align: right;
 }
 
-.contact-icon-left{
+.contact-icon-left {
   text-align: left;
 }
 
@@ -131,4 +154,8 @@ footer p{
   height: 100%;
   width: 100%;
   z-index: -10;
+}
+
+.minHeightC {
+  min-height: 40vh;
 }
