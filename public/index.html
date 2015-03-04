@@ -1,60 +1,197 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <title>MP2 Starter</title>
-  <script src="./lib/angular/angular.min.js"></script>
-  <script src="./js/controllers.js"></script>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./foundation/css/foundation.css">
-  
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>MP2 Starter</title>
+    <script src="./lib/angular/angular.min.js"></script>
+    <script src="./js/controllers.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./foundation/css/foundation.css">
+    <script src="./foundation/js/vendor/modernizr.js"></script>
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 
+<header id="large-header">
+    <h1 id="main-header">Winning Combo Presents</h1>
+    <h2 id="header-title">Project Wizards</h2>
+</header>
+
 <body>
+<nav class="sticky-nav">
+    <div data-magellan-expedition="fixed">
+        <dl class="sub-nav">
+            <dd data-magellan-arrival="dimension"><a href="#dimension">Dimension</a></dd>
+            <dd data-magellan-arrival="game-info"><a href="#game-info">Progress</a></dd>
+            <dd data-magellan-arrival="team-info"><a href="#team-info">Team</a></dd>
+            <dd data-magellan-arrival="contact"><a href="#contact">Contact</a></dd>
+        </dl>
+    </div>
+</nav>
+<div data-magellan-destination="dimension" id="dimension">
+    <div class="small-12 small-centered column">
+        <ul class="dimension-slider" data-orbit>
+            <li>
+                <img src="images/banner-1.png" alt="slide 1"/>
 
-	<nav class="top-bar" data-topbar role="navigation">
-	  <ul class="title-area">
-	    <li class="name">
-	      <h1><a href="#">MP2</a></h1>
-	    </li>
-	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	  </ul>
+                <div class="orbit-caption">
+                    2D Style
+                </div>
+            </li>
+            <li class="active">
+                <img src="images/banner-2.png" alt="slide 2"/>
 
-	  <section class="top-bar-section">
-	    <!-- Left Nav Section -->
-	    <ul class="left">
-	      <li><a href="https://courses.engr.illinois.edu/cs498rk1/index.html">CS498RK</a></li>
-	    </ul>
-	  </section>
-	</nav>
+                <div class="orbit-caption">
+                    3D Cartoon Style
+                </div>
+            </li>
+            <li>
+                <img src="images/banner-3.png" alt="slide 3"/>
 
-	<div class="row" ng-app = "demoApp">
-		<div class="panel small-centered columns small-12 medium-4">
-    	<input id="nameInput" ng-model="name" placeholder="Your Name" autofocus>
-	
-		<h3>Hello, {{name}}</h3>
+                <div class="orbit-caption">
+                    3D Realistic Style
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
 
-		</div>
-	</div>
-	<div class="row">
-		<div class="alert columns small-12 large-6">
-			<div><img src="http://lorempixel.com/400/200/cats" /></div>
+<div class="background-blue" id="game-info" data-magellan-destination="game-info" data-equalizer>
+    <div class="row">
+        <h1 class="column small-12 small-uncollapse">
+            Progress So Far
+        </h1>
+    </div>
+    <div class="row">
+        <div class="small-centered medium-uncentered columns small-uncollapse small-12 medium-8 background-blue" data-equalizer-watch>
+            <p>
+                Here we have the current state of the game. You can view the sprite sheet or the game video by clicking on it.
+                The sprite sheet is not in it's final form as these sprites were just borowed for development. We are in the process of hiring
+                a new graphic designer in order to create our final sprites.
+            </p>
+            <p>
+                The game play itself is in early stages of development. We have only he basics of the game ready. Movement of the main character works
+                as well as very simple enemy behaviours. These include following the player, attacking, and patrolling. As there are currently no
+                obstacles on the board the enemy does no path-finding.
+            </p>
+        </div>
+        <div class="small-centered medium-uncentered columns small-uncollapse small-12 medium-4 background-blue">
+            <h4>Click To View</h4>
+            <ul class="small-block-grid-2">
+                <li>
+                    <a class="th" data-reveal-id="myModal">
+                        <img src="/images/sprites-thumb.png" id="sprite-pic">
+                    </a>
 
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
-		</div>
-		<div class="columns small-12 large-6">
-	  	<div><img src="http://lorempixel.com/400/200/nature" />	</div>
-	  	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!</div>
-	</div>
- 
+                    <div id="myModal" class="reveal-modal medium" data-reveal>
+                        <img src="/images/sprites-large.png" class="horizontal-align" >
+                        <a class="close-reveal-modal">&#215;</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="th" data-reveal-id="vidModal" >
+                        <img src="/images/video-thumb.png" id="video-demo">
+                    </a>
+                    <div id="vidModal" class="reveal-modal large" data-reveal>
+                        <div class="flex-video widescreen" style="display: block;">
+                            <video controls loop width="1220" height="756" >
+                                <source src="/images/wizards.mp4" type="video/mp4">
+                                Your Browser does not support html5 videos.
+                            </video>
+                        </div>
+                        <a class="close-reveal-modal">&#215;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 
 
-  <script src="./js/script.js"></script>
-  <script src="./lib/jquery-2.1.3.min/index.js"></script>
-  <script src="./foundation/js/foundation.min.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+</div>
+
+<div id="team-info" data-magellan-destination="team-info">
+    <div class="row">
+        <div class="columns small-12 medium-4">
+            <i class="fa fa-diamond fa-3x team-icon"></i>
+            <h1>Daniel Wachtel</h1>
+            <p>Senior at University of Illinois, pursuing a Bachelor’s of Science degree in Computer Science. Daniel
+                Wachtel worked for Yahoo! Incorporated during last summer as a software engineer
+                for their Mobile and Emerging Products section. He is most experienced with the
+                Android Platform and is the lead developer for this team. Daniel has also done work
+                with interactive computer graphics and is familiar with the graphical pipeline.</p>
+        </div>
+        <div class="columns small-12 medium-4">
+            <i class="fa fa-space-shuttle fa-3x team-icon"></i>
+            <h1>Guru Bhamra</h1>
+            <p>
+                Guru Bhamra is also a senior at University of Illinois, pursing a Bachelor’s of Science degree in
+                Biology with a minor in Computer Science. experience is mostly in Python and working with Microsoft’s .NET platform.  Guru is
+                new to the computer science field, but is trying to learn as much as he can.
+            </p>
+        </div>
+        <div class="columns small-12 medium-4">
+            <i class="fa fa-ship fa-3x team-icon"></i>
+            <h1>Ian Lovrich</h1>
+            <p>
+                Senior at University of Illinois, pursuing a Bachelor’s of Science degree in Computer Science. Ian
+                Lovrich is also an experienced programmer, but is presently contributing to
+                Winning Combo at a minimal level because of current time commitment issues. His
+                experience is mostly in Python and working with Microsoft’s .NET platform.
+            </p>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div id="contact" data-magellan-destination="contact">
+    <div class="row">
+        <div class="columns small-12">
+            <h1>Contact Us By Social Media</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns small-6">
+            <i class="fa fa-facebook-square fa-5x contact-icon-right"></i>
+        </div>
+        <div class="columns small-6">
+            <i class="fa fa-twitter-square fa-5x contact-icon-left"></i>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns small-6">
+            <i class="fa fa-google-plus-square fa-5x contact-icon-right"></i>
+        </div>
+        <div class="columns small-6">
+            <i class="fa fa-tumblr-square fa-5x contact-icon-left"></i>
+        </div>
+    </div>
+
+</div>
+
+<div id="contact-background">
+
+</div>
+
+<footer class="column small-12">
+    <p>
+        @Copyright 2015
+    </p>
+</footer>
+
+
+<script src="./js/script.js"></script>
+<script src="./lib/jquery-2.1.3.min/index.js"></script>
+<script src="./foundation/js/vendor/fastclick.js"></script>
+<script src="./foundation/js/foundation.min.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
+<script>
+    $(document).foundation();
+    $(document).foundation('reveal', 'reflow');
+</script>
 </body>
 </html>

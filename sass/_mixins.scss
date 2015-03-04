@@ -1,0 +1,17 @@
+
+@mixin h-center-absolute{
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+@mixin v-center-absolute{
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin center-absolute{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

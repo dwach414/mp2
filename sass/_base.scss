@@ -1,14 +1,134 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
-@import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+
+
+#large-header {
+  padding-top: 30vh;
+  background-image: url("/images/Rooftops.jpg") !important;
+  background-size: cover;
+  padding-bottom: 30vh;
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+header h1, header h2{
+  text-align: center;
+  color: $my-blue;
 }
 
+footer{
+  background: $my-beige;
+}
+
+footer p{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#main-header{
+  font-size: 6vw;
+}
+
+#header-title{
+  font-size: 5vw;
+}
+
+#dimension {
+  background: $my-brown;
+}
+
+.background-blue {
+  background: $my-blue;
+}
+
+.v-center-wrapper{
+  height: 100%;
+}
+
+#plus-button{
+  position: absolute;
+  @include center-absolute;
+  z-index: 10;
+}
+
+.horizontal-align{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#game-info{
+  background: $my-blue;
+}
+
+.margin-top-small{
+  margin-top: 20% !important;
+}
+
+#game-info h1, #game-info h4{
+  color: $my-brown;
+}
+
+#game-info p{
+  color: $my-beige;
+}
+
+#team-info{
+  background: $my-brown;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  display: inline-block;
+  width: 100%;
+}
+
+.team-icon{
+  padding-top: 20px;
+  text-align: center;
+  color: $my-orange;
+}
+
+#team-info h1, #team-info p {
+  text-align: center;
+}
+
+#team-info h1 {
+  color: $my-blue;
+}
+
+#team-info p {
+  color: $my-green;
+}
+
+#contact{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#contact h1, #contact i{
+  color: $my-blue;
+}
+
+#contact h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-icon-right{
+  text-align: right;
+}
+
+.contact-icon-left{
+  text-align: left;
+}
+
+#contact-background {
+  position: fixed;
+  background-image: url("/images/contact-background.png") !important;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
