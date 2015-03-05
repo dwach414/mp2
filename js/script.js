@@ -15,4 +15,5 @@
 //    this.style.backgroundColor=backgroundColor;
 //}
 
-$('.top-bar-section a').smoothScroll();
+$('.top-bar-section a').smoothScroll({offset: -$('.top-bar').height()});
+
