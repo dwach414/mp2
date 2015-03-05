@@ -15,3 +15,4 @@
 //    this.style.backgroundColor=backgroundColor;
 //}
 
+$('.top-bar-section a').smoothScroll();
