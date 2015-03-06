@@ -2,10 +2,10 @@
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 #large-header {
-  padding-top: 30vh;
+  padding-top: 15vh;
 //  background-image: url("/data/images/Rooftops-scaled.jpg") !important;
   background-size: cover;
-  padding-bottom: 30vh;
+  padding-bottom: 45vh;
 }
 
 header h1, header h2 {
@@ -23,11 +23,11 @@ footer p {
 }
 
 #main-header {
-  font-size: 6vw;
+  font-size: 8vh;
 }
 
 #header-title {
-  font-size: 5vw;
+  font-size: 6vh;
 }
 
 #dimension {
@@ -90,11 +90,11 @@ footer p {
 }
 
 #game-info h1, #game-info h4 {
-  color: $my-brown;
+  color: $my-green;
 }
 
 #game-info p {
-  color: $my-beige;
+  color: $my-brown;
 }
 
 #team-info {

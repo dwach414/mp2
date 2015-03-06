@@ -1,0 +1,21 @@
+<div class="row">
+    Search: <input ng-model="query">
+</div>
+<div class="row">
+    <select ng-model="orderProp">
+        <option value="title">Alphabetical</option>
+        <option value="age">Newest</option>
+    </select>
+</div>
+<div class="row">
+    <ul class="columns small-12">
+        <li ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="thumbnail">
+            <p>
+                {{movie.title}}
+            </p>
+            <a href="#/list/{{movie.imdbID}}" class="thumb"><img ng-src="./data/images/{{movie.imdbID}}.jpg"></a>
+            <a href="#/list/{{movie.imdbID}}"></a>
+        </li>
+    </ul>
+
+</div>

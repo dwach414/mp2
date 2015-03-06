@@ -1,4 +1,4 @@
-var demoApp = angular.module('demoApp', []);
+//var demoApp = angular.module('mp2', []);
 
 // demoApp.controller('demoController', ['$scope', '$http', function($scope, $http) {
 //   $http.get('public/data/cs498rk.json').success(function(data) {
@@ -6,3 +6,26 @@ var demoApp = angular.module('demoApp', []);
 //     $scope.artistOrder = 'name';
 //   });
 // }]);
+
+imdbControllers = angular.module('imdbControllers', []);
+
+imdbControllers.controller('ImdbListCtrl', function ($scope, $http) {
+    $http.get('./data/imdb250.json').success(function(data) {
+        $scope.movies = data;
+    });
+
+    $scope.orderProp = 'rank';
+});
+
+imdbControllers.controller('ImdbDetailCtrl', ['$scope', '$routeParams', '$http',
+    function($scope, $routeParams, $http) {
+        $http.get('./data/imdb250.json').success(function(data) {
+            console.log(data[0]);
+            for (var i = 0; i < data.length; i++){
+
+                   if(data[i]['imdbID'] == $routeParams.imdbID){
+                       $scope.movie = data[i];
+                   }
+            }
+        });
+    }]);
