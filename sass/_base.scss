@@ -159,3 +159,38 @@ footer p {
 .minHeightC {
   min-height: 40vh;
 }
+
+
+//---------------------------------CSS FOR IMDB250-----------------------------
+
+.imdbListItem {
+  background: $my-brown;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+
+.imdb-list{
+  margin-left: 0;
+  background: $my-beige;
+}
+
+.movie-title{
+  color: $my-blue;
+}
+
+.movie-rank{
+  color: $my-green;
+}
+
+#imdb-title{
+  text-align: center;
+  color: $my-orange;
+}
+
+.inline{
+  display:inline;
+}

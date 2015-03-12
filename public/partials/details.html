@@ -1,1 +1,122 @@
-TBD: detail view for <span>{{movie.title}}</span>
+<div class="row ">
+    <div class="columns small-12">
+        <h2>
+            {{movie.title}}
+        </h2>
+    </div>
+    <div class="columns small-12">
+        <h3>
+            Rank: {{movie.rank}}
+        </h3>
+    </div>
+
+</div>
+<div class="row">
+    <div class="columns small-6">
+        <a href="#/list/{{prevMovie}}"><i class="fa fa-arrow-circle-left fa-3x"></i></a>
+    </div>
+    <div class="columns small-6">
+        <a href="#/list/{{nextMovie}}"><i class="fa fa-arrow-circle-right fa-3x"></i></a>
+    </div>
+
+</div>
+<hr>
+<div class="row">
+    <div class="columns small-12 medium-4">
+        <a href="#/list/{{movie.imdbID}}"><img ng-src="./data/images/{{movie.imdbID}}.jpg"></a>
+        <a href="#/list/{{movie.imdbID}}"></a>
+    </div>
+    <div class="columns small-12 medium-8">
+        <section>
+            <h4>
+                Storyline
+            </h4>
+            <p>
+                {{movie.plot}}
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h4>
+                Cast
+            </h4>
+            <b class="inline">
+                Directors:
+            </b>
+            <p ng-repeat="dir in movie.director" class="inline">
+                {{dir }}
+            </p>
+            <p>
+            </p>
+            <b class="inline">
+                Actors:
+            </b>
+            <p ng-repeat="actor in movie.actors">
+                {{actor}}
+            </p>
+            <p>
+            </p>
+        </section>
+        <hr>
+        <section>
+            <b class="inline">
+                Genres:
+            </b>
+            <p ng-repeat="genre in movie.genre" class="inline">
+                {{genre }}
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h4>
+                Details
+            </h4>
+            <b class="inline">
+                Country:
+            </b>
+            <p ng-repeat="country in movie.country" class="inline">
+                {{country }}
+            </p>
+            <p>
+            </p>
+            <b class="inline">
+                Languages:
+            </b>
+            <p ng-repeat="lang in movie.language" class="inline">
+                {{lang }}
+            </p>
+            <p>
+            </p>
+            <p>
+                <b>Released: </b> {{movie.released}}
+            </p>
+            <p>
+                <b>Runtime: </b> {{movie.runtime}}
+            </p>
+            <p>
+                <b>Rated: </b> {{movie.rated}}
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h4>
+                Review
+            </h4>
+            <p>
+                <b>Awards: </b> {{movie.awards}}
+            </p>
+            <p>
+                <b>IMDB Rating: </b> {{movie.imdbRating}}
+            </p>
+            <p>
+                <b>IMDB Votes: </b> {{movie.imdbVotes}}
+            </p>
+            <p>
+                <b>Metascore: </b> {{movie.metascore}}
+            </p>
+
+        </section>
+
+
+    </div>
+</div>

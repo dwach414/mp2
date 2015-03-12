@@ -1,21 +1,61 @@
+
+
+
 <div class="row">
-    Search: <input ng-model="query">
+    <div class="columns small-12">
+        <label>Search
+            <input ng-model="query" type="text" placeholder="Search" />
+        </label>
+    </div>
+
 </div>
 <div class="row">
-    <select ng-model="orderProp">
-        <option value="title">Alphabetical</option>
-        <option value="age">Newest</option>
-    </select>
+    <div class="columns small-12">
+        <select ng-model="orderProp" class="columns small-12">
+            <option value="title">Title</option>
+            <option value="rank">Rank</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns" ng-init="direction=''">
+        <input ng-model="direction" type="radio" name="orderBy" value="" id="ascOrder"><label
+            for="ascOrder">Ascending</label>
+        <input ng-model="direction" type="radio" name="orderBy" value="reverse" id="desOrder"><label for="desOrder">Descending</label>
+    </div>
 </div>
 <div class="row">
-    <ul class="columns small-12">
-        <li ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="thumbnail">
-            <p>
-                {{movie.title}}
-            </p>
-            <a href="#/list/{{movie.imdbID}}" class="thumb"><img ng-src="./data/images/{{movie.imdbID}}.jpg"></a>
-            <a href="#/list/{{movie.imdbID}}"></a>
+    <ul class="imdb-list">
+        <li ng-repeat="movie in movies | filter:query | orderBy:orderProp:direction" class="imdbListItem">
+            <div class="row">
+                <div class="columns small-3 medium-2 large-1 ">
+                    <a href="#/list/{{movie.imdbID}}"><img ng-src="./data/images/{{movie.imdbID}}.jpg"
+                                                           class="imdb-thumb"></a>
+                    <a href="#/list/{{movie.imdbID}}"></a>
+                </div>
+                <div class="columns small-9 medium-10 large-11 hide-for-small">
+                    <h2 class="movie-title">
+                        {{movie.title}}
+                    </h2>
+
+                    <h3 class="movie-rank">
+                        Rank: {{movie.rank}}
+                    </h3>
+                </div>
+                <div class="columns small-9 medium-10 large-11 hide-for-medium-up">
+                    <p class="movie-title">
+                        {{movie.title}}
+                    </p>
+
+                    <p class="movie-rank">
+                        Rank: {{movie.rank}}
+                    </p>
+                </div>
+            </div>
+
         </li>
+
     </ul>
 
 </div>
