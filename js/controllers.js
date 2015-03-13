@@ -9,13 +9,14 @@
 
 imdbControllers = angular.module('imdbControllers', []);
 
-imdbControllers.controller('ImdbListCtrl', function ($scope, $http) {
+imdbControllers.controller('ImdbListCtrl', ['$scope', '$http',
+    function ($scope, $http) {
     $http.get('./data/imdb250.json').success(function(data) {
         $scope.movies = data;
     });
 
     $scope.orderProp = 'rank';
-});
+}]);
 
 imdbControllers.controller('ImdbDetailCtrl', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
@@ -43,3 +44,13 @@ imdbControllers.controller('ImdbDetailCtrl', ['$scope', '$routeParams', '$http',
 
 
     }]);
+
+
+imdbControllers.controller('ImdbGalleryCtrl', ['$scope', '$http',
+    function($scope, $http){
+        $scope.filters = {};
+        $http.get('./data/imdb250.json').success(function(data) {
+           $scope.movies = data;
+        });
+    }
+]);

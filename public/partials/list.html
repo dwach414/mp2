@@ -27,7 +27,7 @@
 </div>
 <div class="row">
     <ul class="imdb-list">
-        <li ng-repeat="movie in movies | filter:query | orderBy:orderProp:direction" class="imdbListItem">
+        <li ng-repeat="movie in movies | filter:query | orderBy:orderProp:direction" class="imdbListItem imdb-listing">
             <div class="row">
                 <div class="columns small-3 medium-2 large-1 ">
                     <a href="#/list/{{movie.imdbID}}"><img ng-src="./data/images/{{movie.imdbID}}.jpg"

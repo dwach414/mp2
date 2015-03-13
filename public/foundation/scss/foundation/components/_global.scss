@@ -240,6 +240,8 @@ $oil           : #333333 !default;
 $jet           : #222222 !default;
 $black         : #000000 !default;
 
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
 // We use these as default colors throughout
 $primary-color: #008CBA !default;   // bondi-blue
 $secondary-color: #e7e7e7 !default; // white-lilac
@@ -252,6 +254,8 @@ $info-color: #a0d3e8 !default;      // cornflower
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !default;
+$font-family-merriweather-sans-serif: 'Merriweather Sans', sans-serif !default;
+$font-family-merriweather-serif: 'Merriweather', serif !default;
 
 // We use these to define default font weights
 $font-weight-normal: normal !default;
@@ -260,7 +264,7 @@ $font-weight-bold: bold !default;
 // We use these to control various global styles
 $body-bg: #fff !default;
 $body-font-color: #222 !default;
-$body-font-family: $font-family-sans-serif !default;
+$body-font-family: $font-family-serif !default;
 $body-font-weight: $font-weight-normal !default;
 $body-font-style: normal !default;
 

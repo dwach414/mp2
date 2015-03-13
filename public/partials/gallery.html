@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="columns small-12">
+        <a  ng-click="filters.genre = ''" class="button small">All</a>
+        <a ng-click="filters.genre = 'Action'" class="button small">Action</a>
+        <a ng-click="filters.genre = 'Adventure'" class="button small">Adventure</a>
+        <a ng-click="filters.genre = 'Crime'" class="button small">Crime</a>
+        <a ng-click="filters.genre = 'Comedy'" class="button small">Comedy</a>
+        <a ng-click="filters.genre = 'Drama'" class="button small">Drama</a>
+        <a ng-click="filters.genre = 'Musical'" class="button small">Musical</a>
+        <a ng-click="filters.genre = 'Mystery'" class="button small">Mystery</a>
+        <a ng-click="filters.genre = 'Romance'" class="button small">Romance</a>
+        <a ng-click="filters.genre = 'Sci-Fi'" class="button small">Sci-Fi</a>
+        <a ng-click="filters.genre = 'Thriller'" class="button small">Thriller</a>
+        <a ng-click="filters.genre = 'Western'" class="button small">Western</a>
+
+    </div>
+
+</div>
+<div class="row">
+    <ul class="small-block-grid-3 medium-block-grid-5 large-block-grid-7">
+        <li ng-repeat="movie in movies | filter:filters" class="imdb-listing">
+            <a href="#/list/{{movie.imdbID}}"><img ng-src="./data/images/{{movie.imdbID}}.jpg"
+                                                   class="gallery-thumb"></a>
+            <a href="#/list/{{movie.imdbID}}"></a>
+        </li>
+
+    </ul>
+</div>

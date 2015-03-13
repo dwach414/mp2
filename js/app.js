@@ -1,7 +1,12 @@
 
+
+angular.module('imdbAnimations', ['ngAnimate']);
+
+
 var imdbApp = angular.module('imdbApp', [
     'ngRoute',
-    'imdbControllers'
+    'imdbAnimations',
+    'imdbControllers',
 ]);
 
 imdbApp.config(['$routeProvider',
@@ -15,7 +20,12 @@ imdbApp.config(['$routeProvider',
                 templateUrl: './partials/details.html',
                 controller: 'ImdbDetailCtrl'
             }).
+            when('/gallery',{
+                templateUrl: './partials/gallery.html',
+                controller: 'ImdbGalleryCtrl'
+            }).
             otherwise({
                 redirectTo: '/list'
             });
     }]);
+
